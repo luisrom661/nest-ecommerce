@@ -3,7 +3,7 @@ import { Logger, ValidationPipe, VersioningType } from '@nestjs/common';
 
 import { AppModule } from './app.module';
 
-const logger = new Logger('APP')
+const logger = new Logger('APP');
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -19,7 +19,7 @@ async function bootstrap() {
     }),
   );
   await app.listen(process.env.PORT ?? 3000, () => {
-    logger.log(`⛱ Server running on port ${process.env.PORT ?? 3000}`)
+    logger.log(`⛱ Server running on port ${process.env.PORT ?? 3000}`);
   });
 }
 bootstrap();
